@@ -1,0 +1,39 @@
+account_configs:
+  '123456789012':
+    name: example-production
+    services:
+    - ce
+    - cloudfront
+    - cloudwatch
+    - config
+    - ec2
+    - ecr
+    - ecs
+    - elasticache
+    - elbv2
+    - guardduty
+    - kms
+    - rds
+    - route53
+    - s3
+    - securityhub
+    - vpc
+    - waf
+  '234567890123':
+    name: example-staging
+    services:
+    - cloudwatch
+    - config
+    - ecr
+    - ecs
+    - elbv2
+    - guardduty
+    - rds
+    - route53
+    - s3
+    - securityhub
+    - ses
+    - vpc
+    - waf
+  '345678901234':
+    name: example-development

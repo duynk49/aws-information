@@ -1,0 +1,146 @@
+commands:
+  ec2:
+  - aws ec2 describe-instances
+  - aws ec2 describe-security-groups
+  - aws ec2 describe-key-pairs
+  - aws ec2 describe-images --owners self
+  - aws ec2 describe-snapshots --owner-ids self
+  - aws ec2 describe-network-interfaces
+  - aws ec2 describe-placement-groups
+  ec2_volumes:
+  - aws ec2 describe-volumes
+  - aws ec2 describe-volume-modifications
+  vpc:
+  - aws ec2 describe-vpcs
+  - aws ec2 describe-internet-gateways
+  - aws ec2 describe-nat-gateways
+  - aws ec2 describe-route-tables
+  - aws ec2 describe-network-acls
+  - aws ec2 describe-vpc-endpoints
+  - aws ec2 describe-vpc-peering-connections
+  - aws ec2 describe-dhcp-options
+  subnet:
+  - aws ec2 describe-subnets
+  - aws ec2 describe-availability-zones
+  rds:
+  - aws rds describe-db-instances
+  - aws rds describe-db-clusters
+  - aws rds describe-db-parameter-groups
+  - aws rds describe-db-subnet-groups
+  - aws rds describe-db-security-groups
+  - aws rds describe-db-snapshots --snapshot-type manual
+  - aws rds describe-db-cluster-snapshots --snapshot-type manual
+  - aws rds describe-option-groups
+  - aws rds describe-reserved-db-instances
+  elbv2:
+  - aws elbv2 describe-load-balancers
+  - aws elbv2 describe-target-groups
+  - aws elbv2 describe-ssl-policies
+  elb:
+  - aws elb describe-load-balancers
+  - aws elb describe-load-balancer-policies
+  ecs:
+  - aws ecs list-clusters
+  - aws ecs describe-clusters
+  - aws ecs list-services
+  - aws ecs list-task-definitions
+  - aws ecs list-container-instances
+  ecr:
+  - aws ecr describe-repositories
+  - aws ecr describe-registry
+  elasticache:
+  - aws elasticache describe-replication-groups
+  - aws elasticache describe-cache-clusters
+  - aws elasticache describe-cache-parameter-groups
+  - aws elasticache describe-cache-subnet-groups
+  - aws elasticache describe-cache-security-groups
+  lambda:
+  - aws lambda list-functions
+  - aws lambda list-layers
+  - aws lambda list-event-source-mappings
+  s3:
+  - aws s3api list-buckets
+  - aws s3control get-public-access-block --account-id $(aws sts get-caller-identity
+    --query Account --output text)
+  cloudfront:
+  - aws cloudfront list-distributions
+  - aws cloudfront list-cloud-front-origin-access-identities
+  - aws cloudfront list-cache-policies
+  - aws cloudfront list-origin-request-policies
+  route53:
+  - aws route53 list-hosted-zones
+  - aws route53 list-health-checks
+  wafv2:
+  - aws wafv2 list-web-acls --scope REGIONAL
+  - aws wafv2 list-web-acls --scope CLOUDFRONT
+  - aws wafv2 list-rule-groups --scope REGIONAL
+  - aws wafv2 list-ip-sets --scope REGIONAL
+  waf:
+  - aws wafv2 list-web-acls --scope REGIONAL
+  iam:
+  - aws iam list-users
+  - aws iam list-groups
+  - aws iam list-roles
+  - aws iam list-policies --scope Local
+  - aws iam get-account-summary
+  - aws iam get-account-password-policy
+  kms:
+  - aws kms list-keys
+  - aws kms list-aliases
+  secretsmanager:
+  - aws secretsmanager list-secrets
+  sns:
+  - aws sns list-topics
+  - aws sns list-subscriptions
+  sqs:
+  - aws sqs list-queues
+  cloudwatch:
+  - aws cloudwatch describe-alarms
+  - aws cloudwatch list-dashboards
+  - aws logs describe-log-groups
+  config:
+  - aws configservice describe-configuration-recorders
+  - aws configservice describe-delivery-channels
+  - aws configservice describe-config-rules
+  cloudtrail:
+  - aws cloudtrail describe-trails
+  - aws cloudtrail get-event-selectors
+  ssm:
+  - aws ssm describe-instance-information
+  - aws ssm describe-parameters
+  guardduty:
+  - aws guardduty list-detectors
+  securityhub:
+  - aws securityhub get-enabled-standards
+  backup:
+  - aws backup list-backup-vaults
+  - aws backup list-backup-plans
+  athena:
+  - aws athena list-work-groups
+  - aws athena list-data-catalogs
+  glue:
+  - aws glue get-databases
+  - aws glue get-crawlers
+  dms:
+  - aws dms describe-replication-instances
+  - aws dms describe-replication-tasks
+  ce:
+  - aws ce get-cost-and-usage --time-period Start=2026-03-01,End=2026-04-01 --granularity
+    MONTHLY --metrics BlendedCost
+  - aws ce get-reservation-coverage --time-period Start=2026-03-01,End=2026-04-01
+  ses:
+  - aws ses list-identities
+  - aws ses get-send-quota
+  bedrock:
+  - aws bedrock list-foundation-models
+  - aws bedrock get-foundation-model --model-identifier cohere.rerank-v3-5:0
+  - aws bedrock list-model-customization-jobs
+  - aws bedrock list-custom-models
+  lightsail:
+  - aws lightsail get-instances
+  - aws lightsail get-load-balancers
+  - aws lightsail get-databases
+  - aws lightsail get-distributions
+  - aws lightsail get-domains
+  - aws lightsail get-blueprints
+  - aws lightsail get-bundles
