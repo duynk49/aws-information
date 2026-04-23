@@ -369,9 +369,16 @@ class BillingAnalyzer:
                     continue
                     
                 # Filter by account name if specified
-                if account_name and account_name not in file_account_name:
-                    continue
+                if account_name:
+                    # Normalize both names by replacing hyphens with underscores for comparison
+                    # This handles the inconsistency where billing files use underscores but 
+                    # account names from config may have hyphens
+                    normalized_account_name = account_name.replace('-', '_')
+                    normalized_file_account_name = file_account_name.replace('-', '_')
                     
+                    if normalized_account_name not in normalized_file_account_name:
+                        continue
+                
                 files.append(file)
         
         return sorted(files)
