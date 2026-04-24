@@ -8,7 +8,7 @@ This document describes the major refactoring performed to eliminate code duplic
 
 The original `aws.py` and `billing.py` scripts contained significant duplicate code (~150 lines) including:
 - AWS authentication logic
-- Configuration loading from YAML files  
+- Configuration loading from YAML files
 - Account information handling
 - Argument parsing setup
 - File/directory management
@@ -32,7 +32,7 @@ load_config(include_commands=False)
 #### Authentication & Credentials
 ```python
 handle_aws_authentication(skip_login=False)
-check_aws_credentials()  
+check_aws_credentials()
 aws_login()
 get_account_info()
 ```
@@ -119,7 +119,7 @@ account_found, account_config, found_account_id = aws_utils.find_account_config(
 
 ### User Experience
 - **Consistent CLI interface** across all AWS scripts
-- **Uniform authentication flow** 
+- **Uniform authentication flow**
 - **Standardized error messages** and help text
 - **Predictable file naming** and directory structure
 
@@ -175,7 +175,7 @@ All refactored functionality maintains backward compatibility:
 ./aws.py --skip-login                    # Auto-detects account
 ./aws.py --account demo-company-prod   # Explicit account
 
-# billing.py - requires account specification  
+# billing.py - requires account specification
 ./billing.py --account demo-company-prod --skip-login
 ./billing.py --account 1234567890 --month 2026-04
 ```
@@ -184,7 +184,7 @@ All refactored functionality maintains backward compatibility:
 
 ### Potential Additions to aws_utils.py
 - **Region management** functions for multi-region operations
-- **Profile management** for AWS CLI profile handling  
+- **Profile management** for AWS CLI profile handling
 - **Resource tagging** utilities for consistent resource labeling
 - **Pagination helpers** for large AWS API responses
 - **Retry logic** with exponential backoff for API calls

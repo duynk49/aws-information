@@ -52,7 +52,7 @@ Successfully converted Python configuration files to YAML format for easier read
 # List all configured accounts
 ./config_manager.py list-accounts
 
-# List all configured services  
+# List all configured services
 ./config_manager.py list-services
 
 # Validate configuration files
@@ -85,12 +85,12 @@ Successfully converted Python configuration files to YAML format for easier read
 
 ### Accounts Configured (3)
 1. **demo-company-prod** (ID: 123456789012) - 11 services
-2. **demo-gifts** (ID: 123456789013) - 15 services  
+2. **demo-gifts** (ID: 123456789013) - 15 services
 3. **demo-gifting** (ID: 123456789014) - 10 services
 
 ### Services Defined (31)
 - `ec2`, `vpc`, `subnet`, `rds`, `elbv2`, `elasticache`
-- `lambda`, `s3`, `cloudfront`, `route53`, `wafv2` 
+- `lambda`, `s3`, `cloudfront`, `route53`, `wafv2`
 - `iam`, `kms`, `secretsmanager`, `sns`, `sqs`
 - `cloudwatch`, `config`, `cloudtrail`, `ssm`
 - `guardduty`, `securityhub`, `backup`, and more
@@ -100,7 +100,7 @@ Successfully converted Python configuration files to YAML format for easier read
 ### ✅ Complete Success
 - ✅ All configuration files load correctly
 - ✅ Main script (`aws.py`) works without changes to user interface
-- ✅ All 76 AWS CLI commands execute successfully  
+- ✅ All 76 AWS CLI commands execute successfully
 - ✅ 100% success rate maintained
 - ✅ Configuration validation passes
 - ✅ Both old Python files and new YAML files coexist safely
@@ -121,7 +121,7 @@ Successfully converted Python configuration files to YAML format for easier read
 ```
 aws/
 ├── aws.py                    # Main script (updated to use YAML)
-├── config_manager.py         # New configuration management tool  
+├── config_manager.py         # New configuration management tool
 ├── configs/
 │   ├── accounts.yaml         # Account configurations
 │   ├── commands.yaml         # Service command definitions

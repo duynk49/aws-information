@@ -82,7 +82,7 @@ END ERROR SUMMARY
 **Pattern**: `AccessDenied`, `UnauthorizedOperation`, `Forbidden`
 **Solution**: Check IAM policies and ensure proper permissions for the service
 
-### Regional Service Limitations  
+### Regional Service Limitations
 **Pattern**: `CLOUDFRONT scope only available in us-east-1`
 **Solution**: Switch to us-east-1 region or skip CloudFront-specific operations
 
@@ -177,7 +177,7 @@ Logs are kept indefinitely. To implement rotation:
 from logging.handlers import RotatingFileHandler
 
 handler = RotatingFileHandler(
-    log_file, 
+    log_file,
     maxBytes=10*1024*1024,  # 10MB
     backupCount=5
 )

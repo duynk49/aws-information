@@ -173,7 +173,7 @@ cp storages/billings/2026-04/demo-company-prod.json \
 The flat storage system can easily accommodate additional data types:
 
 - `compliance_{YYYY-MM}_{account_name}_{account_id}.json` - Compliance scan results
-- `optimization_{YYYY-MM}_{account_name}_{account_id}.json` - Cost optimization reports  
+- `optimization_{YYYY-MM}_{account_name}_{account_id}.json` - Cost optimization reports
 - `backup_{YYYY-MM-DD}_{account_name}_{account_id}.json` - Configuration backups
 - `security_{YYYY-MM}_{account_name}_{account_id}.json` - Security assessments
 
@@ -211,7 +211,7 @@ ls -la storages/aws/
 # Verify billing files
 ls storages/aws/billing_*.json
 
-# Verify infrastructure files  
+# Verify infrastructure files
 ls storages/aws/infrastructure_*.json
 
 # Test configuration analysis

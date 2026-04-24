@@ -126,7 +126,7 @@ config['account_configs'][account_id] = {
     'services': services
 }
 
-# NEW - add_account() method  
+# NEW - add_account() method
 config['account_configs'][account_id] = {
     'name': name,
     'services': services
@@ -138,7 +138,7 @@ config['account_configs'][account_id] = {
 ### Python Scripts
 - **aws_utils.py** - Added helper functions, updated core lookup functions
 - **modules/billing.py** - Removed ACCOUNT_ID_TO_NAME usage
-- **modules/infra.py** - Updated to use account_configs only  
+- **modules/infra.py** - Updated to use account_configs only
 - **billing_analyzer.py** - Updated account lookup methods
 - **config_manager.py** - Removed account_mapping from add operations
 
@@ -162,7 +162,7 @@ config['account_configs'][account_id] = {
 - **Cleaner YAML**: No redundant account_mapping section
 - **Easier Maintenance**: Only one place to update account information
 
-### ✅ Better Code Quality  
+### ✅ Better Code Quality
 - **Consistent API**: All scripts use same helper functions
 - **Reduced Complexity**: Simpler lookup patterns
 - **Error Prevention**: No risk of mapping/config inconsistencies
@@ -176,7 +176,7 @@ config['account_configs'][account_id] = {
 
 All functionality verified after refactoring:
 - ✅ Python syntax validation - no import errors
-- ✅ Configuration loading with simplified YAML structure  
+- ✅ Configuration loading with simplified YAML structure
 - ✅ Helper functions work correctly for all lookups
 - ✅ All scripts (aws.py, billing modules) function normally
 - ✅ Account addition/lookup operations work correctly
@@ -191,7 +191,7 @@ All functionality verified after refactoring:
 
 **Backward Compatibility:**
 - All existing functionality preserved
-- Same command-line interfaces maintained  
+- Same command-line interfaces maintained
 - No changes to user-facing behavior
 - Configuration automatically uses new structure
 
@@ -221,7 +221,7 @@ account_configs = config['account_configs']
 # ID to name
 name = aws_utils.get_account_name_by_id(account_configs, '123456789012')
 
-# Name to ID  
+# Name to ID
 account_id = aws_utils.get_account_id_by_name(account_configs, 'example-production')
 ```
 

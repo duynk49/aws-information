@@ -27,7 +27,7 @@ storages/
 Contains AWS Cost Explorer billing data collected by [`billing.py`](../billing.py).
 
 - **Folder Structure**: `storages/billings/{YYYY-MM}/`
-- **File Naming**: `{account-name}.json` 
+- **File Naming**: `{account-name}.json`
 - **Content**: Monthly billing reports including cost breakdowns by service, region, usage type, etc.
 - **Example**: `storages/billings/2026-04/demo-company-prod.json`
 
@@ -110,7 +110,7 @@ storages/
 
 - **Account Names**: Use configured account names from `configs/accounts.yaml`
 - **File Extension**: Always `.json`
-- **Date Formats**: 
+- **Date Formats**:
   - Billing: `YYYY-MM` (monthly)
   - Infrastructure: `YYYY-MM-DD` (daily)
 
@@ -127,7 +127,7 @@ All scripts use the shared utilities in [`aws_utils.py`](../aws_utils.py):
 The storage system is designed to accommodate future data categories:
 
 - `storages/configurations/` - Account and service configurations
-- `storages/compliance/` - Compliance and security scan results  
+- `storages/compliance/` - Compliance and security scan results
 - `storages/optimization/` - Cost and performance optimization reports
 - `storages/backups/` - Configuration and data backups
 

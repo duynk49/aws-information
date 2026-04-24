@@ -11,7 +11,7 @@ The AWS automation scripts have been refactored from standalone scripts into a u
 # Infrastructure collection
 ./aws.py --account demo-company-prod
 
-# Billing collection  
+# Billing collection
 ./billing.py --account demo-company-prod --month 2026-04
 ```
 
@@ -54,7 +54,7 @@ Contains the extracted infrastructure resource collection functionality:
 - `handle_command_error()` - Error categorization and handling
 - Complete error logging system
 
-#### `modules/billing.py` 
+#### `modules/billing.py`
 Contains the extracted billing data collection functionality:
 - `run_billing(account_info, args)` - Main function for billing collection
 - `execute_aws_command()` - AWS Cost Explorer command execution
@@ -88,7 +88,7 @@ The refactored `aws.py` serves as the main command dispatcher:
 ```python
 def setup_parser():
     """Setup argument parser with subcommands"""
-    
+
 def main():
     """Main entry point with authentication and routing"""
 ```

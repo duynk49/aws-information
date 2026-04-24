@@ -1,7 +1,7 @@
 # Billing Analyzer Usage Guide
 
 ## Overview
-The `billing_analyzer.py` script automatically extracts billing information from AWS Cost Explorer data and updates your YAML configuration files using the `config_manager.py`. 
+The `billing_analyzer.py` script automatically extracts billing information from AWS Cost Explorer data and updates your YAML configuration files using the `config_manager.py`.
 
 **Key Features:**
 - 🔐 **AWS Auto-Detection**: Automatically detects your current AWS account from credentials
@@ -23,7 +23,7 @@ The `billing_analyzer.py` script automatically extracts billing information from
 # Analyze specific month
 ./billing_analyzer.py --month 2026-04
 
-# Skip AWS login (use existing credentials) 
+# Skip AWS login (use existing credentials)
 ./billing_analyzer.py --skip-login
 ```
 
@@ -65,7 +65,7 @@ By default, only services with costs ≥ $0.01 are considered. You can adjust th
 # Analyze March 2026 for demo-company-prod with $0.05 threshold
 ./billing_analyzer.py --account demo-company-prod --month 2026-03 --min-cost 0.05
 
-# Dry run auto-update for current AWS account 
+# Dry run auto-update for current AWS account
 ./billing_analyzer.py --dry-run --auto-update --skip-login
 
 # Auto-detect account and update configurations
@@ -102,7 +102,7 @@ When the script auto-detects an AWS account that isn't in your configuration, it
 🛠️  What services should be configured for this account?
 💡 You can add common services like: ec2, s3, iam, lambda, rds, vpc, cloudwatch
 💡 Or press Enter for a default set: ec2, s3, iam, vpc, cloudwatch
-🔧 Enter services (comma-separated): 
+🔧 Enter services (comma-separated):
 
 ✅ Added account 'demo_account' (ID: 1234567890) with services: ec2, s3, iam, vpc, cloudwatch
 ✅ Successfully added account 'demo_account' to configuration.
@@ -163,7 +163,7 @@ $ ./billing_analyzer.py --skip-login --dry-run --auto-update
 # 2. Collect billing data first
 $ ./billing.py --account my-new-account
 
-# 3. Run analyzer again  
+# 3. Run analyzer again
 $ ./billing_analyzer.py --skip-login --auto-update
 🎯 Using account: my-new-account (ID: 1234567890)
 📊 BILLING ANALYSIS REPORT
@@ -220,7 +220,7 @@ This script complements your existing tools:
 
 1. **AWS Authentication**: Uses same method as `aws.py` (AWS SSO login or existing credentials)
 2. **Account Setup**: Automatically detects and configures unknown accounts
-3. **Collect billing**: Use your existing `billing.py` script  
+3. **Collect billing**: Use your existing `billing.py` script
 4. **Analyze & update**: Use `billing_analyzer.py --auto-update`
 5. **Execute commands**: Use your existing `aws.py` script with updated configs
 
