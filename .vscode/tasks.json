@@ -1,0 +1,89 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Format Code",
+            "type": "shell",
+            "command": "ruff",
+            "args": ["format", "."],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "detail": "Format all Python files using ruff"
+        },
+        {
+            "label": "Lint Code",
+            "type": "shell",
+            "command": "ruff",
+            "args": ["check", "."],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": "$ruff",
+            "detail": "Lint all Python files using ruff"
+        },
+        {
+            "label": "Lint and Fix",
+            "type": "shell",
+            "command": "ruff",
+            "args": ["check", "--fix", "."],
+            "group": "build", 
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": "$ruff",
+            "detail": "Lint and automatically fix issues using ruff"
+        },
+        {
+            "label": "Type Check",
+            "type": "shell",
+            "command": "mypy",
+            "args": ["."],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": "$mypy",
+            "detail": "Type check Python files using mypy"
+        },
+        {
+            "label": "Format, Lint & Type Check",
+            "dependsOrder": "sequence",
+            "dependsOn": [
+                "Format Code",
+                "Lint and Fix", 
+                "Type Check"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Run complete code quality pipeline"
+        },
+        {
+            "label": "Install Pre-commit Hooks",
+            "type": "shell",
+            "command": "pre-commit",
+            "args": ["install"],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "panel": "new"
+            },
+            "problemMatcher": [],
+            "detail": "Install pre-commit git hooks"
+        }
+    ]
+}
