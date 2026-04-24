@@ -1,0 +1,6 @@
+PyYAML==6.0.3
+
+# Development dependencies
+ruff==0.3.4
+mypy==1.9.0
+pre-commit==3.7.0

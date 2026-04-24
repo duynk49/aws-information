@@ -149,6 +149,9 @@ dmypy.json
 # pytype static type analyzer
 .pytype/
 
+# ruff
+.ruff_cache/
+
 # Cython debug symbols
 cython_debug/
 
@@ -158,9 +161,13 @@ cython_debug/
 #  project, it is recommended to add above rules to your ~/.gitignore_global file instead.
 .idea/
 
-# VS Code
+# VS Code - exclude most but keep shared config
 .vscode/
 *.code-workspace
+
+# Keep shared VS Code configurations
+!.vscode/settings.json
+!.vscode/tasks.json
 
 # Temporary files
 *.tmp
