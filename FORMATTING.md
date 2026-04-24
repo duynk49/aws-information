@@ -44,7 +44,7 @@ make clean         # Clean cache files
 ### Direct Commands
 ```bash
 ruff format .      # Format all Python files
-ruff check .       # Lint all Python files  
+ruff check .       # Lint all Python files
 ruff check --fix . # Fix auto-fixable issues
 mypy .             # Type check all Python files
 ```
@@ -60,7 +60,7 @@ If you're using VS Code, the workspace is configured to:
 **Available VS Code Tasks:**
 - `Ctrl+Shift+P` → "Tasks: Run Task" → Choose from:
   - Format Code
-  - Lint Code  
+  - Lint Code
   - Lint and Fix
   - Type Check
   - Format, Lint & Type Check (default build task)
@@ -78,7 +78,7 @@ To skip hooks (not recommended): `git commit --no-verify`
 ## Configuration
 
 - **Ruff & MyPy config:** [`pyproject.toml`](pyproject.toml)
-- **Pre-commit config:** [`.pre-commit-config.yaml`](.pre-commit-config.yaml)  
+- **Pre-commit config:** [`.pre-commit-config.yaml`](.pre-commit-config.yaml)
 - **VS Code config:** [`.vscode/settings.json`](.vscode/settings.json)
 
 ## What Gets Checked
